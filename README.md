@@ -1,31 +1,92 @@
-# Docsify Template
+# Quick start
 
-> A simple [Docsify](https://github.com/docsifyjs/docsify/) template for creating Markdown-based documentation sites, with no build process required.
+It is recommended to install `docsify-cli` globally, which helps initializing and previewing the website locally.
 
-## Site Setup
+```bash
+npm i docsify-cli -g
+```
 
-### Static Webserver
-Upload these template files to any static web server. The file `.nojekyll` is only required if hosting the site on GitHub Pages and otherwise can be removed.
+## Initialize
 
-### GitHub Pages
+If you want to write the documentation in the `./docs` subdirectory, you can use the `init` command.
 
-#### Hosting Site
+```bash
+docsify init ./docs
+```
 
-To host this template on GitHub Pages do the following:  
+## Writing content
 
-1. Log into GitHub if you have not done so already
-2. Tap the **Use this template** button in the upper-right of this GitHub Repository and choose **Create a new repository**
-3. Enter a name for your new Repository and then tap the **Create repository** button
-4. Once your new Repostitory is created go to **Settings**, then select **Pages** from the left-hand sidebar, and under **Branch** choose **main** and then tap the **Save** button
-5. Wait a minute or two and refresh the same **Pages** page - once your site is ready a message will be displayed at the top of the screen along with a site link and a **Visit site** button
+After the `init` is complete, you can see the file list in the `./docs` subdirectory.
 
-#### Editing Content
+- `index.html` as the entry file
+- `README.md` as the home page
+- `.nojekyll` prevents GitHub Pages from ignoring files that begin with an underscore
 
-How about editing the content of your new Docsify site on GitHub Pages? View the Markdown page you want to edit (for example, **README.md**) and tap the **Pencil Icon**, then save any changes by tapping the green **Commit changes...** button. In just a few moments the Docsify site will be automatically updated to reflect those changes.
+You can easily update the documentation in `./docs/README.md`, of course you can add [more pages](more-pages.md).
 
-### Viewing Locally 
-Run `npx serve .` (Node.js users) or `python -m http.server 8000` (Python users) in the repo folder to serve run locally.
+## Preview your site
 
-## Docsify Documentation
+Run the local server with `docsify serve`. You can preview your site in your browser on `http://localhost:3000`.
 
-To learn more about using Docsify, visit https://docsify.js.org.
+```bash
+docsify serve docs
+```
+
+?> For more use cases of `docsify-cli`, head over to the [docsify-cli documentation](https://github.com/docsifyjs/docsify-cli).
+
+## Manual initialization
+
+If you don't like `npm` or have trouble installing the tool, you can manually create `index.html`:
+
+```html
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      //...
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+</body>
+</html>
+```
+
+If you installed python on your system, you can easily use it to run a static server to preview your site.
+
+```bash
+cd docs && python -m SimpleHTTPServer 3000
+```
+
+## Loading dialog
+
+If you want, you can show a loading dialog before docsify starts to render your documentation:
+
+```html
+  <!-- index.html -->
+
+  <div id="app">Please wait...</div>
+```
+
+You should set the `data-app` attribute if you changed `el`:
+
+```html
+  <!-- index.html -->
+
+  <div data-app id="main">Please wait...</div>
+
+  <script>
+    window.$docsify = {
+      el: '#main'
+    }
+  </script>
+```
