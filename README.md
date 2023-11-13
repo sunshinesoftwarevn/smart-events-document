@@ -59,7 +59,6 @@ Start the ReactJS development server using the following command:
 npm start
 ```
 
-
 This will start the development server and open the ReactJS application in your default browser.
 If you see this page, this source is running successfully.
 
