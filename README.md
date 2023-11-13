@@ -2,6 +2,8 @@
 
 It is recommended to install `docsify-cli` globally, which helps initializing and previewing the website locally.
 
+![MatBao Login Page](/assets/images/login.png)
+
 ```bash
 npm i docsify-cli -g
 ```
