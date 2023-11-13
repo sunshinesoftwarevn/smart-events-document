@@ -1,14 +1,14 @@
-# Quick start
+# Getting started with Matbao.ws - Smart Event
 
-It is recommended to install `docsify-cli` globally, which helps initializing and previewing the website locally.
+event.matbao.ws is a website that provides smart event solutions in Vietnam. We offer comprehensive solutions, from planning, organizing to managing events, helping customers save time, cost and improve the effectiveness of events.
 
-![MatBao Login Page](/assets/images/login.png)
+![MatBao Login Page](/assets/images/bg-ws.png)
+
+## Initialize
 
 ```bash
 npm i docsify-cli -g
 ```
-
-## Initialize
 
 If you want to write the documentation in the `./docs` subdirectory, you can use the `init` command.
 
