@@ -53,8 +53,7 @@ To get started, please continue with the **index.js** file.
 | sortPositionName       | string          | 'desc'    | Key of sort        |
 | typeSort       | string          | 'sortField'    | Type of sort key        |
 
-HOW TO USE
-==========
+**HOW TO USE**
 
 ![How to use table](/assets/images/use-table.png)
 
@@ -81,8 +80,8 @@ Breadcrumb code is a type of markup that helps users navigate through a website.
 | items                     | Array      | *undefined*    | List breadcrumb        |
 | children                     | `ReactNode`      | *undefined*    | React Node children inside breadcrumb       |
 
-HOW TO USE
-==========
+**HOW TO USE**
+
 ![How to use Breadcrumb](/assets/images/use-breadcrumb.png)
 
 ## Camera
