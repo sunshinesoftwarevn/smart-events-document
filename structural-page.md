@@ -44,7 +44,9 @@ You can import a font-like link via public/index.html or import a @font-face lin
 ![Fonts](/assets/images/fonts.png)
 
 Example for @font-face:
+
 ![Font Structural](/assets/images/font-structural.png)
 
- in font.face.css
- ![Fonts](/assets/images/font-face.png)
+in ***font.face.css***
+
+![Fonts](/assets/images/font-face.png)
