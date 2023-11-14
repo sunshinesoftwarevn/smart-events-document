@@ -71,12 +71,37 @@ Includes service (main api) and store redux toolkit declaration
 | props                     | object     | *undefined*    | Props pass to layout      |
 
 ## Account 
+Manage personal information of organizers
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Full Layout                     | `BTC`     | true   | Includes operations to edit basic information of the organizers       |
 
 ## Authenticate
+User identity authentication feature
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Blank Layout                     | undefined    | false   | Login Page       |
 
 ## CheckInOut
+The user check in and check out feature is reserved for the organizers
+
+Required: `PIN`
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Full Layout                     | `BTC`     | true   | CheckIn & CheckOut       |
 
 ## CheckInOutPublic
+The user check in and check out feature is reserved for all user
+
+Required: `PIN`
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Blank Layout                     | undefined     | 'Any'   | CheckIn & CheckOut       |
+
 
 ## DynamicGroupCode
 
