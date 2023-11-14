@@ -181,9 +181,6 @@ Manage and push notifications
 
 See notification list for btc
 
-
-Manage and push notifications
-
 | Layout              | Roles           | Auth  | Description  |
 | --- |---| ---| ---|
 | Full Layout                     | `BTC`     | true   | Notification     |
@@ -198,6 +195,22 @@ The system's public pages are for users
 
 ## Smtp
 
+Manage SMTP codes for each event
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Blank                     | `Admin Super`     | true   | SMTP     |
+
 ## UserInvite
 
+Manage and approve user invite for event organizers
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Blank                     | `BTC`     | true   | User Invite     |
+
 ## UserRegister
+
+Manage user register for event organizers
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Blank                     | `BTC`     | true   | User Register     |
