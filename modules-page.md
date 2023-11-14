@@ -139,19 +139,62 @@ Dashboard admin will show the welcome banner and btc will show statistics, chart
 
 ## InfoEventPayment
 
+Manage and approve registration applications for event organizers
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Full Layout                     | `BTC`     | true   | Manage and approve registration applications for event organizers      |
+
 ## InfoPin
+
+Manage PIN codes for each event
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Full Layout                     | `BTC`     | true   | Manage and approve registration applications for event organizers      |
 
 ## InfoPrizesLuckydraw
 
+Manage PIN codes for each event
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Full Layout                     | `BTC`     | true   | Manage and approve registration applications for event organizers      |
+
 ## LuckyDraw
 
-## MstOptions
+Lucky dial interface for event btc
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Full Layout                     | `BTC`     | true   | Lucky Draw     |
 
 ## Notification
 
+Manage and push notifications
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Full Layout                     | `BTC`     | true   | Lucky Draw     |
+
 ## NotificationClient
 
+See notification list for btc
+
+
+Manage and push notifications
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Full Layout                     | `BTC`     | true   | Notification     |
+
 ## Public
+
+The system's public pages are for users
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Blank                     | undefined     | true   | Public Page     |
 
 ## Smtp
 
