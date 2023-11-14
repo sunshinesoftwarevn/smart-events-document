@@ -4,3 +4,4 @@
 - [Layout](layout-page)
 - [Components](components-page)
 - [Modules Page](modules-page)
+- [Others](other-page)
