@@ -58,10 +58,32 @@ HOW TO USE
 
 ![How to use table](/assets/images/use-table.png)
 
-## Breadcrumb
-Inside your templates, if you need to link to your assets directory use 
-
 ## Animated Numbers
+Animated random number code is a type of code that generates and displays a random number in an animated fashion
+
+|      Properties       |              Type              |    Default Value     | Description                                                                                                                                                                                                                                                                                               |
+| :-------------: | :----------------------------: | :------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| animateToNumber |             number             |      none      | Number to be animated                                                                                                                                                                                                                                                                                     |
+|    fontStyle    |      React.CSSProperties?      |      none      | Style of number text                                                                                                                                                                                                                                                                                      |
+|  includeComma   |            boolean?            |     false      | Whether the number contains commas                                                                                                                                                                                                                                                                        |
+| locale          |           string?              |    en-US       | Formats animated number as per locale. Also it should be used with `inculdeComma` prop. For list of locales, search for "BCP 47 language tags"   |
+|   configs(1)    |        SpringConfig[]?         | config.default | This module is using [react-spring](https://www.react-spring.io) and you can refer to this [config option](https://react-spring.io/common/configs). If you pass multiple settings, an animation is randomly assigned to each number. _ DO NOT USE `duration` because of a bug that hasn't been fixed yet_ |
+|   configs(2)    | (number, number): SpringConfig | none | The first parameter gives information about the number to be changed, And the second parameter gives information about the order of the changing numbers. You can use that information to adjust the animation by returning the config                                                                    |
+
+
+## Breadcrumb
+Breadcrumb code is a type of markup that helps users navigate through a website. It consists of a list of links that show the user's current location within the site hierarchy.
+
+| Properties              | Types           | Default Value  | Description  |
+| --- |---| ---| ---|
+| title                     | string     | *undefined*    | Title of breadcrumb        |
+| subtitle                     | subtitle     | *undefined*    | Text below title        |
+| items                     | Array      | *undefined*    | List breadcrumb        |
+| children                     | `ReactNode`      | *undefined*    | React Node children inside breadcrumb       |
+
+HOW TO USE
+==========
+![How to use Breadcrumb](/assets/images/use-breadcrumb.png)
 
 ## Camera
 
