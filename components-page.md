@@ -76,7 +76,7 @@ Breadcrumb code is a type of markup that helps users navigate through a website.
 | Properties              | Types           | Default Value  | Description  |
 | --- |---| ---| ---|
 | title                     | string     | *undefined*    | Title of breadcrumb        |
-| subtitle                     | subtitle     | *undefined*    | Text below title        |
+| subtitle                     | string     | *undefined*    | Text below title        |
 | items                     | Array      | *undefined*    | List breadcrumb        |
 | children                     | `ReactNode`      | *undefined*    | React Node children inside breadcrumb       |
 
@@ -110,6 +110,295 @@ When there is an error, display the error components defined before.
 This components via [React Ace](https://www.npmjs.com/package/react-ace)
 
 ## Konva Editor
+[React Konva](https://konvajs.org/docs/react/index.html) is a JavaScript library for drawing complex canvas graphics using React. It provides declarative and reactive bindings to the Konva Framework, making it easy to create and manage rich canvas-based applications with React.
+
+### Editor
+This component is used to build a template of an invitation letter.
+
+| Properties              | Types           | Default Value  | Description  |
+| --- |---| ---| ---|
+| value                     | string     | *undefined*    | Value of editor        |
+| templateImg                     | string     | *undefined*    | Config template Image       |
+| backgroundImg                     | strinh      | *undefined*    | Background of letter        |
+| onChangeTemplateImg                     | `Functional`      | *undefined*    | Handle change config template images       |
+| onChange                     | `Functional`      | *undefined*    | Handle change config template       |
+
+![Toolbar Config](/assets/images/konva-toolbar.png)
+
+Handle some action of Konva via toolbar custom action follow in code:
+```bash
+ const HeaderToolBar = () => (
+    <div className="containerToolbar containerCanvas__header">
+      <div className="containerIconeToolbar" onClick={desfazer}>
+        <img className="img" src={Desfazer} title="Trở về"></img>
+      </div>
+      <div className="containerIconeToolbar" onClick={refazer}>
+        <img className="img" src={Refazer} title="Kế tiếp"></img>
+      </div>
+      <div className="containerIconeToolbar">
+        <BackgroundChange onChange={(img) => onBackgroundChange(img)}>
+          <img className="img" src={BgImage} title="Đổi nền" />
+        </BackgroundChange>
+      </div>
+      <div className="containerIconeToolbar">
+        <ImageChange onChange={(img) => loadImage(img)}>
+          <img className="img" src={AddImage} title="Thêm ảnh" />
+        </ImageChange>
+      </div>
+      <div className="containerIconeToolbar" onClick={() => loadImage(DEFAULT_QRCODE_IMG_LINK)}>
+        <img className="img" src={QrCode} title="QRCode"></img>
+      </div>
+      <div className="containerIconeToolbar" onClick={() => loadImage(DEFAULT_AVATAR_IMG_LINK)}>
+        <img className="img" src={Avatar} title="Avatar"></img>
+      </div>
+      <div className="containerIconeToolbar" onClick={addNewCircle}>
+        <img className="img" src={Circle} title="Khối tròn"></img>
+      </div>
+      <div className="containerIconeToolbar" onClick={addNewSquare}>
+        <img className="img" src={Rectangle} title="Khối vuông"></img>
+      </div>
+      <div className="containerIconeToolbar" onClick={addNewTriangle}>
+        <img className="img" src={Triangule} title="Khối tam giác"></img>
+      </div>
+      <div className="containerIconeToolbar" onClick={addNewText}>
+        <img className="img" src={InsertText} title="Thêm văn bản"></img>
+      </div>
+      <div className="containerIconeToolbar">
+        <Dropdown
+          menu={{
+            items,
+          }}
+          trigger={['click']}
+          bordered={false}
+        >
+          <a onClick={(e) => e.preventDefault()}>
+            <Space>
+              {t('Konva:add_dynamic')}
+              <DownOutlined />
+            </Space>
+          </a>
+        </Dropdown>
+      </div>
+
+      {arrayObjectsLayer[indexTextSelected] &&
+        arrayObjectsLayer[indexTextSelected]?.type === 'text' && (
+          <div className="containerIconeToolbar">
+            <div className="containerOpcao">
+              <select
+                disabled={!arrayObjectsLayer[indexTextSelected]}
+                value={arrayObjectsLayer[indexTextSelected].fontSize}
+                onChange={changeFontSize}
+                style={{ width: 120 }}
+              >
+                {[...new Array(100)].map(
+                  (i, index) =>
+                    index > 5 && (
+                      <option
+                        key={index}
+                        onClick={() => changeFontSize(`${index * zoom}px`)}
+                        value={index}
+                      >
+                        {`${index}px`}
+                      </option>
+                    ),
+                )}
+              </select>
+            </div>
+          </div>
+        )}
+
+      {arrayObjectsLayer[indexTextSelected] &&
+        arrayObjectsLayer[indexTextSelected]?.type === 'text' && (
+          <div className="list-align">
+            <div
+              className={classNames({
+                'align-item': true,
+                active: arrayObjectsLayer[indexTextSelected]?.align === 'left',
+              })}
+              onClick={() => onChangeAlign('left')}
+            >
+              <img className="img" src={AlignLeft} title="Căn trái"></img>
+            </div>
+            <div
+              className={classNames({
+                'align-item': true,
+                active: arrayObjectsLayer[indexTextSelected]?.align === 'center',
+              })}
+              onClick={() => onChangeAlign('center')}
+            >
+              <img className="img" src={AlignCenter} title="Căn giữa"></img>
+            </div>
+            <div
+              className={classNames({
+                'align-item': true,
+                active: arrayObjectsLayer[indexTextSelected]?.align === 'right',
+              })}
+              onClick={() => onChangeAlign('right')}
+            >
+              <img className="img" src={AlignRight} title="Căn phải"></img>
+            </div>
+          </div>
+        )}
+
+      {arrayObjectsLayer[indexTextSelected] &&
+        arrayObjectsLayer[indexTextSelected]?.type === 'text' && (
+          <div className="containerIconeToolbar">
+            <div className="containerOpcao">
+              <SelectFont
+                disabled={!arrayObjectsLayer[indexTextSelected]}
+                value={arrayObjectsLayer[indexTextSelected].fontFamily}
+                onChange={changeFontFamily}
+                style={{ width: 120 }}
+              />{' '}
+            </div>
+          </div>
+        )}
+
+      {arrayObjectsLayer[indexTextSelected] &&
+        arrayObjectsLayer[indexTextSelected]?.type === 'text' && (
+          <div
+            className="containerIconeToolbar"
+            onClick={() =>
+              changeStyle(
+                arrayObjectsLayer[indexTextSelected] &&
+                  arrayObjectsLayer[indexTextSelected].fontStyle === 'bold'
+                  ? 'normal'
+                  : 'bold',
+              )
+            }
+            style={
+              arrayObjectsLayer[indexTextSelected] &&
+              arrayObjectsLayer[indexTextSelected].fontStyle === 'bold'
+                ? { backgroundColor: 'grey' }
+                : {}
+            }
+          >
+            <img className="img" src={Bold} title="In đậm"></img>
+          </div>
+        )}
+      {arrayObjectsLayer[indexTextSelected] &&
+        arrayObjectsLayer[indexTextSelected]?.type === 'text' && (
+          <div
+            className="containerIconeToolbar"
+            onClick={() =>
+              changeStyle(
+                arrayObjectsLayer[indexTextSelected] &&
+                  arrayObjectsLayer[indexTextSelected].fontStyle === 'italic'
+                  ? 'normal'
+                  : 'italic',
+              )
+            }
+            style={
+              arrayObjectsLayer[indexTextSelected] &&
+              arrayObjectsLayer[indexTextSelected].fontStyle === 'italic'
+                ? { backgroundColor: 'grey' }
+                : {}
+            }
+          >
+            <img className="img" src={Italic} title="In nghiêng"></img>
+          </div>
+        )}
+      {arrayObjectsLayer[indexTextSelected] &&
+        arrayObjectsLayer[indexTextSelected]?.type === 'text' && (
+          <div
+            className="containerIconeToolbar"
+            onClick={() =>
+              setUnderline(
+                arrayObjectsLayer[indexTextSelected] &&
+                  arrayObjectsLayer[indexTextSelected].textDecoration === 'underline'
+                  ? ''
+                  : 'underline',
+              )
+            }
+            style={
+              arrayObjectsLayer[indexTextSelected] &&
+              arrayObjectsLayer[indexTextSelected].textDecoration === 'underline'
+                ? { backgroundColor: 'grey' }
+                : {}
+            }
+          >
+            <img className="img" src={Underline} title="Gạch dưới"></img>
+          </div>
+        )}
+      {arrayObjectsLayer[indexTextSelected] &&
+        arrayObjectsLayer[indexTextSelected]?.type === 'image' && (
+          <InputNumber
+            value={parseInt(arrayObjectsLayer[indexTextSelected]?.radius)}
+            prefix={<RadiusIco />}
+            onPressEnter={(e) => onChangeRadius(parseInt(e.target.value))}
+            bordered={false}
+            controls={false}
+          />
+        )}
+
+      <div
+        className="containerIconeToolbar"
+        onClick={tooglePallet}
+        style={showPallet ? { backgroundColor: 'grey' } : {}}
+      >
+        <img className="img" src={FillColor} title="Màu nền"></img>
+      </div>
+      <div className="containerIconeToolbar" onClick={duplicarObject}>
+        <img className="img" src={Duplicate} title="Nhân bản"></img>
+      </div>
+      <div className="containerIconeToolbar" onClick={() => zommStage(zoom + 1)}>
+        <img className="img" src={ZoomOut} title="Zoom -"></img>
+      </div>
+      <div className="containerIconeToolbar" onClick={() => zommStage(zoom - 1)}>
+        <img className="img" src={ZoomIn} title="Zoom +"></img>
+      </div>
+      <div className="containerIconeToolbar" onClick={() => trazerItem(true)}>
+        <img className="img" src={Front} title="Lên trên"></img>
+      </div>
+      <div className="containerIconeToolbar" onClick={() => trazerItem()}>
+        <img className="img" src={Back} title="Sau cùng"></img>
+      </div>
+      <div className="containerIconeToolbar" onClick={() => backgroundToogle()}>
+        <img
+          className="img"
+          src={BackgroundIcon}
+          title="Nền"
+          style={!backgroundOn ? { backgroundColor: 'grey' } : {}}
+        ></img>
+      </div>
+
+      {!!selectedObject && (
+        <div className="containerIconeToolbar" onClick={() => deleteSelected()}>
+          <img className="img" src={Delete} title="Xóa"></img>
+        </div>
+      )}
+    </div>
+  );
+  ```
+Handle body of Konva via [React Konva](https://konvajs.org/api/Konva.html)
+
+### Render Editor
+This component is used to render the template that was built by Konva Editor.
+Same editor. However, turn off all editor actions.
+
+**HOW TO USE**
+Editor used inside Form Item Antd
+```bash
+    <KonvaEditor
+    backgroundImg={backgroundImg}
+    onBackgroundChange={(src) => {
+      form.setFieldValue({ invitationPhoto: src });
+      setBackgroundImg(src);
+    }}
+    onChange={(tem) => {
+      form.setFieldsValue({ template: tem });
+      setTemplate(tem);
+    }}
+    templateImg={templateImg}
+    onChangeTemplateImg={(imgArr) => {
+      form.setFieldsValue({ templateImg: imgArr });
+      setTemplateImg(imgArr);
+    }}
+  />;
+```
+
+To Render, replace all dynamic options by key like:
+![Render Image](/assets/images/konva-render.png)
 
 ## Modal Preview
 
