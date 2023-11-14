@@ -84,13 +84,30 @@ Breadcrumb code is a type of markup that helps users navigate through a website.
 
 ![How to use Breadcrumb](/assets/images/use-breadcrumb.png)
 
-## Camera
-
 ## Ckeditor
+Creating custom components for [CKEditor 5](https://ckeditor.com/docs/ckeditor5/latest/features/document-outline.html) involves extending the editor's core functionality and user interface with new elements and interactions. This process requires a deep understanding of the editor's architecture, including its plugin system, data model, and event handling mechanisms.
+
+| Properties              | Types           | Default Value  | Description  |
+| --- |---| ---| ---|
+| value                     | string     | *undefined*    | Value of editor        |
+| field                     | string     | *undefined*    | Key of field       |
+| onChange                     | `Functional`      | *undefined*    | Handle change event editor        |
+| isReadOnly                     | boolean      | *undefined*    | Readonly mode       |
+
+**HOW TO USE**
+Use these components inside the form item antd.
 
 ## ErrorBoundary
+Error boundaries are a React feature introduced in version 16 that allows you to catch and handle JavaScript errors in child components and prevent them from crashing the entire application. They provide a way to display a fallback UI or log the error instead of letting the error bubble up and crash the app.
+When there is an error, display the error components defined before.
+
+**HOW TO USE**
+```bash
+<ErrorBoundary>...</ErrorBoundary>
+```
 
 ## Input Code
+This components via [React Ace](https://www.npmjs.com/package/react-ace)
 
 ## Konva Editor
 
