@@ -453,15 +453,45 @@ Two action: confirm actions or get actions
 
 ## Select DatePicker
 ---
+This components fork via [react-dropdown-date](https://www.npmjs.com/package/react-dropdown-date) and with Form Item Antd
 
 ## Select Font
 ---
+Import some font from Google and select to use this by array was defined.
+
+Import via google fonts
+```bash
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Acme|Alegreya|Alegreya+Sans|Anton|Archivo|Archivo+Black|Archivo+Narrow|Arimo|Arvo|Asap|Asap+Condensed|Bitter|Bowlby+One+SC|Bree+Serif|Cabin|Cairo|Catamaran|Crete+Round|Crimson+Text|Cuprum|Dancing+Script|Dosis|Droid+Sans|Droid+Serif|EB+Garamond|Exo|Exo+2|Faustina|Fira+Sans|Fjalla+One|Francois+One|Gloria+Hallelujah|Hind|Inconsolata|Indie+Flower|Josefin+Sans|Julee|Karla|Lato|Libre+Baskerville|Libre+Franklin|Lobster|Lora|Mada|Manuale|Maven+Pro|Merriweather|Merriweather+Sans|Montserrat|Montserrat+Subrayada|Mukta+Vaani|Muli|Noto+Sans|Noto+Serif|Nunito|Open+Sans|Open+Sans+Condensed:300|Oswald|Oxygen|PT+Sans|PT+Sans+Caption|PT+Sans+Narrow|PT+Serif|Pacifico|Passion+One|Pathway+Gothic+One|Play|Playfair+Display|Poppins|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Ropa+Sans|Rubik|Saira|Saira+Condensed|Saira+Extra+Condensed|Saira+Semi+Condensed|Sedgwick+Ave|Sedgwick+Ave+Display|Shadows+Into+Light|Signika|Slabo+27px|Source+Code+Pro|Source+Sans+Pro|Spectral|Titillium+Web|Ubuntu|Ubuntu+Condensed|Varela+Round|Vollkorn|Work+Sans|Yanone+Kaffeesatz|Zilla+Slab|Zilla+Slab+Highlight"
+      rel="stylesheet"
+    />
+    ```
+
 
 ## Show More
 ---
+To show more or less of content or html content
+
+| Properties              | Types           | Default Value  | Description  |
+| --- |---| ---| ---|
+| content                     | string     | *undefined*    | Value of contents       |
+| html                     | string     | *undefined*    | Value of html content       |
+| style                     | object     | *undefined*    | style for component       |
+| width                     | number     | *undefined*    | Max width content       |
+| className                     | string     | *undefined*    | Class name content      |
+
+**HOW TO USE**
+```bash
+<ShowMore content={content} />
+```
 
 ## Spin & Spinner
 ---
+This components to define Spin loading animation
+**HOW TO USE**
+```bash
+<Spin/>
+```
 
 ## Upload Image
 ---
