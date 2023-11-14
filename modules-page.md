@@ -104,16 +104,38 @@ Required: `PIN`
 
 
 ## DynamicGroupCode
+Dynamic code groups are groups of options for user registration forms
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Full Layout                     | `Admin Super`     | true   | Dynamic code groups       |
 
 ## DynamicOption
+Dynamic options are the options of dynamic groups for the user registration form
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Full Layout                     | `Admin Super`     | true   | Options       |
 
 ## Event
+Manage system events
+
 
 ## Gallery
 
 ## GroupInvite
+Manage group invite
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Full Layout                     | `BTC`     | true   | Group customer invite       |
 
 ## Home
+Dashboard admin will show the welcome banner and btc will show statistics, charts and schedules
+
+| Layout              | Roles           | Auth  | Description  |
+| --- |---| ---| ---|
+| Full Layout                     | undefined     | true   | Dashboard admin       |
 
 ## InfoEventPayment
 
