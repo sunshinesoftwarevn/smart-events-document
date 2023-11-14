@@ -1,92 +1,113 @@
-# Quick start 3
+# Modules
 
-It is recommended to install `docsify-cli` globally, which helps initializing and previewing the website locally.
+Modules in source code are a way of organizing and structuring code into smaller, reusable units. They can help to improve the readability, maintainability, and testability of code.
+___
 
-```bash
-npm i docsify-cli -g
-```
+## Core Structural
 
-## Initialize
+### Mapping module
 
-If you want to write the documentation in the `./docs` subdirectory, you can use the `init` command.
+Modules are mapped using keys in the Modules/index.js file
 
-```bash
-docsify init ./docs
-```
+![Mapping modules](/assets/images/mapping-modules.png) 
 
-## Writing content
+### assets
 
-After the `init` is complete, you can see the file list in the `./docs` subdirectory.
+Just like the assets of the entire system, this place contains images, svg, fonts and css
 
-- `index.html` as the entry file
-- `README.md` as the home page
-- `.nojekyll` prevents GitHub Pages from ignoring files that begin with an underscore
+### Components
 
-You can easily update the documentation in `./docs/README.md`, of course you can add [more pages](more-pages.md).
+Components used specifically for features on the module will be attached here, such as tables of each feature, management forms,...
 
-## Preview your site
+### configs
 
-Run the local server with `docsify serve`. You can preview your site in your browser on `http://localhost:3000`.
+#### api
 
-```bash
-docsify serve docs
-```
+Contain all API route constants of the module.
 
-?> For more use cases of `docsify-cli`, head over to the [docsify-cli documentation](https://github.com/docsifyjs/docsify-cli).
+#### constants
 
-## Manual initialization
+Contain all constants used for modules.
 
-If you don't like `npm` or have trouble installing the tool, you can manually create `index.html`:
+### i18n -> localization
 
-```html
-<!-- index.html -->
+Includes 2 translation files: en.json and vi.json for translation and common use throughout the system
 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
-</head>
-<body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      //...
-    }
-  </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-</body>
-</html>
-```
+### Page
 
-If you installed python on your system, you can easily use it to run a static server to preview your site.
+It is the outermost main page of a route module
 
-```bash
-cd docs && python -m SimpleHTTPServer 3000
-```
+### style
+Contain custom CSS style used for modules.
 
-## Loading dialog
+### Store
+Includes service (main api) and store redux toolkit declaration
 
-If you want, you can show a loading dialog before docsify starts to render your documentation:
+### bootstrap.js
 
-```html
-  <!-- index.html -->
+**Example**
+![bootstrap of modules](/assets/images/bootstrap-module.png)
 
-  <div id="app">Please wait...</div>
-```
+***Properties***
 
-You should set the `data-app` attribute if you changed `el`:
+| Properties              | Types           | Default Value  | Description  |
+| --- |---| ---| ---|
+| name                     | string     | *undefined*    | Name of module       |
+| dir                     | string     | *undefined*    | Dir name of foler modules      |
+| pathRoot                     | object     | *undefined*    | Path root is main route path, example: [domain]/[main]/[url]        |
+| routes                     | routes[]     | *undefined*    | List routes       |
+| lang                     | Object     | *undefined*    | Define language of module via {vi, en}      |
+| isAuthenticate                     | boolean or `Any`    | *undefined*    | Check modules auth or unauth or public      |
+| roles                     | string or Array     | *undefined*    | Check roles allow route      |
 
-```html
-  <!-- index.html -->
+***Routes Properties***
 
-  <div data-app id="main">Please wait...</div>
+| Properties              | Types           | Default Value  | Description  |
+| --- |---| ---| ---|
+| url                     | string     | *undefined*    | Sub url of route       |
+| component                     | string     | *undefined*    | Path to Component       |
+| meta                     | object     | *undefined*    | Meta of modules route       |
+| layout                     | string | `FullLayout` | `BlankLayout`     | `FullLayout`    | Layout of route       |
+| props                     | object     | *undefined*    | Props pass to layout      |
 
-  <script>
-    window.$docsify = {
-      el: '#main'
-    }
-  </script>
-```
+## Account 
+
+## Authenticate
+
+## CheckInOut
+
+## CheckInOutPublic
+
+## DynamicGroupCode
+
+## DynamicOption
+
+## Event
+
+## Gallery
+
+## GroupInvite
+
+## Home
+
+## InfoEventPayment
+
+## InfoPin
+
+## InfoPrizesLuckydraw
+
+## LuckyDraw
+
+## MstOptions
+
+## Notification
+
+## NotificationClient
+
+## Public
+
+## Smtp
+
+## UserInvite
+
+## UserRegister

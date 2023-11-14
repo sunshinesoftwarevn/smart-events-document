@@ -6,6 +6,7 @@ The assets directory contains your un-compiled assets such as Stylus or Sass fil
  ┣ 📂images
  ┣ 📂scss
  ┣ 📂svg
+___
 
 ## Images
 Inside your templates, if you need to link to your assets directory use 
