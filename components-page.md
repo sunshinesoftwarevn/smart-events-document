@@ -465,8 +465,7 @@ Import via google fonts
       href="https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Acme|Alegreya|Alegreya+Sans|Anton|Archivo|Archivo+Black|Archivo+Narrow|Arimo|Arvo|Asap|Asap+Condensed|Bitter|Bowlby+One+SC|Bree+Serif|Cabin|Cairo|Catamaran|Crete+Round|Crimson+Text|Cuprum|Dancing+Script|Dosis|Droid+Sans|Droid+Serif|EB+Garamond|Exo|Exo+2|Faustina|Fira+Sans|Fjalla+One|Francois+One|Gloria+Hallelujah|Hind|Inconsolata|Indie+Flower|Josefin+Sans|Julee|Karla|Lato|Libre+Baskerville|Libre+Franklin|Lobster|Lora|Mada|Manuale|Maven+Pro|Merriweather|Merriweather+Sans|Montserrat|Montserrat+Subrayada|Mukta+Vaani|Muli|Noto+Sans|Noto+Serif|Nunito|Open+Sans|Open+Sans+Condensed:300|Oswald|Oxygen|PT+Sans|PT+Sans+Caption|PT+Sans+Narrow|PT+Serif|Pacifico|Passion+One|Pathway+Gothic+One|Play|Playfair+Display|Poppins|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Ropa+Sans|Rubik|Saira|Saira+Condensed|Saira+Extra+Condensed|Saira+Semi+Condensed|Sedgwick+Ave|Sedgwick+Ave+Display|Shadows+Into+Light|Signika|Slabo+27px|Source+Code+Pro|Source+Sans+Pro|Spectral|Titillium+Web|Ubuntu|Ubuntu+Condensed|Varela+Round|Vollkorn|Work+Sans|Yanone+Kaffeesatz|Zilla+Slab|Zilla+Slab+Highlight"
       rel="stylesheet"
     />
-    ```
-
+```
 
 ## Show More
 ---
@@ -495,3 +494,33 @@ This components to define Spin loading animation
 
 ## Upload Image
 ---
+
+This code will create an image uploader that uses Ant Design's Upload component to upload images to Amazon S3. 
+
+![Upload Structural](/assets/images/upload-structural.png)
+
+`Button`: Upload image with button and no preview
+`Cropper`: Upload image with crop
+`Retangle`: Upload image like retangle avatar
+`Single`: Upload image shape
+
+| Properties              | Types           | Default Value  | Description  |
+| --- |---| ---| ---|
+| accept                     | string     | *undefined*    | Validate file accept upload       |
+| onChange                     | `Functional`     | *undefined*    | Handle when file change       |
+| value                     | string     | *undefined*    | Value of image       |
+| width                     | number     | *undefined*    | Max width image       |
+| height                     | number     | *undefined*    | Max height image     |
+| style                     | object     | *undefined*    | Style image     |
+| label                     | string     | *undefined*    | Label image     |
+| error                     | string     | *undefined*    | Error    |
+| aspectRatio                     | string     | *undefined*    | Aspect Ratio      |
+| helper                     | string     | *undefined*    | Note      |
+| readOnly                     | string     | *undefined*    | Readonly mode      |
+| maxSize                     | number     | *undefined*    | Max Size image     |
+| userID                     | number     | *undefined*    | User upload      |
+| type                     | string     | *undefined*    | type     |
+| keyImage                     | string     | *undefined*    | Key of image      |
+| validateSizeHelper                     | string     | *undefined*    | Helper      |
+| className                     | string     | *undefined*    | class of image      |
+| children                     | `ReactNode`     | *undefined*    | Children of React Node      |
