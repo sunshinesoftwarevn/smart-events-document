@@ -1,5 +1,7 @@
 ## Environment
 
+### Installation
+
 Prerequisites
 Before proceeding, ensure you have the following installed on your system:
 
@@ -57,4 +59,32 @@ npm start
 This will start the development server and open the ReactJS application in your default browser.
 If you see this page, this source is running successfully.
 
-![MatBao Login Page](/assets/images / login.png)
+![MatBao Login Page](/assets/images/login.png)
+
+### API & Environment
+
+To set up an environment, please configure it in src/configs/environment/index.js via:
+📦configs
+ ┣ 📂environment
+ ┃ ┗ 📜index.js
+ ┣ 📂theme
+ ┃ ┗ 📜themeVariables.js
+ ┣ 📜api.js
+ ┣ 📜contants.js
+ ┣ 📜dirUpload.js
+ ┗ 📜themeConfig.js
+
+![Environment Setup](/assets/images/environment.png)
+
+```bash
+ENV_ENVIRONMENT_BASE_URL_API
+```
+-> URL of the API domain
+
+```bash
+ENV_ENVIRONMENT_awsKeys
+```
+
+-> Config S3 upload images
+
+
