@@ -33,7 +33,12 @@ Configure Scss inside the craco.config.js file.
 ## Fonts
 You can import a font-like link via public/index.html or import a @font-face link in the assets folder.
 
-![Fonts](/assets/images/fonts.png)
+```bash
+  <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+  />
+```
 
 Example for @font-face:
 
