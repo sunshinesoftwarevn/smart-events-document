@@ -22,21 +22,13 @@ React lets you define the CSS files/modules/libraries you want to set globally (
 
 Some CSS files are defined in the source code.
 
-📦scss
- ┣ 📂variables
- ┃ ┣ 📜_variables-components.scss
- ┃ ┗ 📜_variables.scss
- ┣ 📜app-loader.scss
- ┣ 📜custom-antd.scss
- ┣ 📜style-rtl.scss
- ┣ 📜style.scss
- ┗ 📜theme.scss
+![CSS Structural](/assets/images/css-structural.png)
 
- ## Sass & Sass Loader
- Install Sass and Sass Loader to render the CSS file.
- Configure Scss inside the craco.config.js file.
+## Sass & Sass Loader
+Install Sass and Sass Loader to render the CSS file.
+Configure Scss inside the craco.config.js file.
 
- ![Sass Loader](/assets/images/sass.png)
+![Sass Loader](/assets/images/sass.png)
 
 ## Fonts
 You can import a font-like link via public/index.html or import a @font-face link in the assets folder.
