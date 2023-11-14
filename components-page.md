@@ -401,8 +401,16 @@ To Render, replace all dynamic options by key like:
 ![Render Image](/assets/images/konva-render.png)
 
 ## Modal Preview
+This code will create a popup window that can render either HTML content or an image letter. The user can switch between the two options using the type in poperties.
+
+| Properties              | Types           | Default Value  | Description  |
+| --- |---| ---| ---|
+| type                     | 'html' or 'konva'     | `html`    | Type of modal       |
+| data                     | string or object     | *undefined*    | Data of render value       |
 
 ## Modal PIN
+
+## Select DatePicker
 
 ## Select Font
 
