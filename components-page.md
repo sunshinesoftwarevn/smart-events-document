@@ -5,6 +5,7 @@ The components directory contains your React.Js Components. Components are what 
 ___
 
 ## Admin Tables
+---
 This component is a defined table with fetching data via static structural common for all systems.
 
 ![Admin Table Structural](/assets/images/admin-table-structural.png)
@@ -58,6 +59,7 @@ To get started, please continue with the **index.js** file.
 ![How to use table](/assets/images/use-table.png)
 
 ## Animated Numbers
+---
 Animated random number code is a type of code that generates and displays a random number in an animated fashion
 
 |      Properties       |              Type              |    Default Value     | Description                                                                                                                                                                                                                                                                                               |
@@ -98,6 +100,7 @@ Creating custom components for [CKEditor 5](https://ckeditor.com/docs/ckeditor5/
 Use these components inside the form item antd.
 
 ## ErrorBoundary
+---
 Error boundaries are a React feature introduced in version 16 that allows you to catch and handle JavaScript errors in child components and prevent them from crashing the entire application. They provide a way to display a fallback UI or log the error instead of letting the error bubble up and crash the app.
 When there is an error, display the error components defined before.
 
@@ -107,12 +110,15 @@ When there is an error, display the error components defined before.
 ```
 
 ## Input Code
+---
 This components via [React Ace](https://www.npmjs.com/package/react-ace)
 
 ## Konva Editor
+---
 [React Konva](https://konvajs.org/docs/react/index.html) is a JavaScript library for drawing complex canvas graphics using React. It provides declarative and reactive bindings to the Konva Framework, making it easy to create and manage rich canvas-based applications with React.
 
 ### Editor
+---
 This component is used to build a template of an invitation letter.
 
 | Properties              | Types           | Default Value  | Description  |
@@ -373,6 +379,7 @@ Handle some action of Konva via toolbar custom action follow in code:
 Handle body of Konva via [React Konva](https://konvajs.org/api/Konva.html)
 
 ### Render Editor
+---
 This component is used to render the template that was built by Konva Editor.
 Same editor. However, turn off all editor actions.
 
@@ -401,6 +408,7 @@ To Render, replace all dynamic options by key like:
 ![Render Image](/assets/images/konva-render.png)
 
 ## Modal Preview
+---
 This code will create a popup window that can render either HTML content or an image letter. The user can switch between the two options using the type in poperties.
 
 | Properties              | Types           | Default Value  | Description  |
@@ -408,14 +416,52 @@ This code will create a popup window that can render either HTML content or an i
 | type                     | 'html' or 'konva'     | `html`    | Type of modal       |
 | data                     | string or object     | *undefined*    | Data of render value       |
 
+**HOW TO USE**
+```bash
+<ModalPreview type="html" data={formData?.inviteEmailTemplate} />
+```
+
 ## Modal PIN
+---
+This code will create a popup window that can required PIN code for module Lucky Draw or Check In Out
+
+Two action: confirm actions or get actions
+`confirm actions`: To defined action and confirm this via index.js
+`get action`: Confirm and then get type of action via get-action.js
+
+| Properties              | Types           | Default Value  | Description  |
+| --- |---| ---| ---|
+| visible                     | boolean     | false    | Show or hidden popup       |
+| setVisible                     | `Functional`     | *undefined*    | Handle show popup       |
+| api                     | `Functional`     | *undefined*    | Api to confirm       |
+| onClose                     | `Functional`     | *undefined*    | Action after close       |
+| action                     | 'lucky-draw' or 'checkin'     | *undefined*    | Action confirm       |
+| eventId                     | number     | *undefined*    | Id of event       |
+
+**HOW TO USE**
+```bash
+   <ModalPin
+        visible={visiblePin}
+        setVisible={setVisiblePin}
+        onClose={onClosePin}
+        api={confirmPinCode}
+        eventId={userData?.eventId}
+        setPinCode={setPinCode}
+        action="check-inout"
+      />
+```
 
 ## Select DatePicker
+---
 
 ## Select Font
+---
 
 ## Show More
+---
 
 ## Spin & Spinner
+---
 
 ## Upload Image
+---
