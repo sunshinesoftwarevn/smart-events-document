@@ -16,35 +16,47 @@ To get started, please continue with the **index.js** file.
 
 | Properties              | Types           | Default Value  | Description  |
 | --- |---| ---| ---|
-| api                     | `Functional`      | *undefined*    | Notes        |
-| defs                    | object          | *undefined*    | Notes        |
-| showCheckbox            | boolean         | true           | Notes        |
-| showDeleteItem          | boolean         | true           | Notes        |
-| showPagination          | boolean         | false          | Notes        |
-| defaultPageSize         | number          | 20             | Notes        |
-| rowKey                  | string          | "id"           | Notes        |
-| apiDelete               | `Functional`      | *undefined*    | Notes        |
-| afterDeleteSuccess      | `Functional`      | *undefined*    | Notes        |
-| loading                 | boolean         | false          | Notes        |
-| treeMode                | boolean         | false          | Notes        |
-| scroll                  | object          | Default scroll | Notes        |
-| modeRowKeys             | object          | *undefined*    | Notes        |
-| disableAllCheckbox      | boolean         | false          | Notes        |
-| disableCheckboxKey      | boolean         | false          | Notes        |
-| disableCheckboxFunction | boolean         | false          | Notes        |
-| rowKeysChange           | `Functional`      | false          | Notes        |
-| scrollToFirstRowOnChange| boolean         | true           | Notes        |
-| conditionShowDeleteItem | `Functional`      | *undefined*    | Notes        |
-| customRequestDelete     | object          | *undefined*    | Notes        |
-| bordered                | boolean         | true           | Notes        |
-| customAction            | `Functional`      | *undefined*    | Notes        |
-| showEditItem            | boolean         | false          | Notes        |
-| editPathRoute           | `Functional`      | *undefined*    | Notes        |
-| typeAction              | string          | *undefined*    | Notes        |
-| menuAction              | Functional      | *undefined*    | Notes        |
-| renderAction            | Functional      | *undefined*    | Notes        |
-| onGroupRowAction        | Functional      | *undefined*    | Notes        |
-| fixedValuesFilter       | object          | *undefined*    | Notes        |
+| api                     | `Functional`      | *undefined*    | Api gets a list to show        |
+| defs                    | object          | *undefined*    | Config table of columns via [table antd](https://4x.ant.design/components/table/#Column)        |
+| showCheckbox            | boolean         | true           | Config to show or hide a checkbox        |
+| showDeleteItem          | boolean         | true           | Config to show or hide a delete action        |
+| showPagination          | boolean         | false          | Config to show or hide a pagination        |
+| defaultPageSize         | number          | 20             | Limit of list        |
+| rowKey                  | string          | "id"           | Key of row        |
+| apiDelete               | `Functional`      | *undefined*    | Api functional for delete action        |
+| afterDeleteSuccess      | `Functional`      | *undefined*    | Action after delete success        |
+| loading                 | boolean         | false          | Loading table        |
+| treeMode                | boolean         | false          | Tree mode        |
+| scroll                  | object          | Default scroll | Config scroll        |
+| modeRowKeys             | object          | *undefined*    |         |
+| disableAllCheckbox      | boolean         | false          | Disabled all checkbox        |
+| disableCheckboxKey      | boolean         | false          | Disabled all checkbox key        |
+| disableCheckboxFunction | boolean         | false          | Disabled all checkbox function        |
+| rowKeysChange           | `Functional`      | false          | Handle change keys action        |
+| scrollToFirstRowOnChange| boolean         | true           | Scroll to first when row changed        |
+| conditionShowDeleteItem | `Functional`      | *undefined*    | Conditional to show delete        |
+| customRequestDelete     | object          | *undefined*    | Custom request delete action        |
+| bordered                | boolean         | true           | Border of table        |
+| customAction            | `Functional`      | *undefined*    | Custom Action of Action columns        |
+| showEditItem            | boolean         | false          | Show edit item        |
+| editPathRoute           | `Functional`      | *undefined*    | Route or action to edit item       |
+| typeAction              | string          | *undefined*    | Type action of action columns         |
+| menuAction              | Functional      | *undefined*    | Menu item of action columns        |
+| renderAction            | Functional      | *undefined*    |         |
+| onGroupRowAction        | Functional      | *undefined*    |         |
+| fixedValuesFilter       | object          | *undefined*    | Values filter fixed        |
+| searchPlaceHolder       | string          | 'CORE:search_holder'    | Placeholder of search        |
+| customRightAction       | `Functional`          | *undefined*    | Right action        |
+| customCheckAction       | `Functional`          | *undefined*    | Check action        |
+| listFilter       | Array          | *undefined*    | List filter key mapping via filter dynamic        |
+| showFilter       | boolean          | false    | Show Filter action        |
+| sortPositionName       | string          | 'desc'    | Key of sort        |
+| typeSort       | string          | 'sortField'    | Type of sort key        |
+
+HOW TO USE
+==========
+
+![How to use table](/assets/images/use-table.png)
 
 ## Breadcrumb
 Inside your templates, if you need to link to your assets directory use 
