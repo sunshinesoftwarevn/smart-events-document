@@ -36,7 +36,7 @@ Create a new directory for your ReactJS project.
 Open a terminal window and navigate to the newly created project directory.
 Initialize a new ReactJS project using the following command:
 
-    ```bash
+```bash
 npx create-react-app my-react-app
 ```
 
@@ -49,9 +49,9 @@ npm install
 
 Starting the ReactJS Development Server
 Navigate to the project directory using a terminal window.
-    Start the ReactJS development server using the following command:
+Start the ReactJS development server using the following command:
 
-        ```bash
+```bash
 npm start
 ```
 
